@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>聊天室</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-deep_purple.min.css" />    
+  <link rel="stylesheet" href="./lib/stone.css">
+  <style>
+    body{
+      height: 100%;
+      overflow: hidden;
+      margin:0px; 
+      padding:0px;
+    }
+    h1{
+      font-size: 25px;
+      font-weight: bold;
+    }
+    input{
+      border:1px solid gray;
+    }
+    textarea{
+      outline: 0;
+      height: 128px;
+      border-top: 1px solid gray;
+      border-bottom: 1px solid gray;
+      width: 96%;
+      padding: 20px;
+      margin: 0 auto;
+      resize : none;
+    }
+    #content {
+      display: none;
+    }
+    #start{
+      width: 100%;
+      height: 600px;
+      display: none;
+    }
+    #welcome{
+      width: 100%;
+      height: 600px;
+      /*height: 100%;*/
+      text-align: center;
+      color: white;
+    }
+    #welcome h1{
+      padding-top: 200px;
+    }
+    #welcome h4{
+      margin-top: 150px;
+      font-size: 14px;
+    }
+    #welcome h5{
+      margin-top: 5px;
+      font-size: 12px;
+    }
+    #start_box{
+      width: 400px;
+      height: 200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    #start_box h1{
+      padding-top: 50px;
+      margin-bottom: 100px;
+    }
+    #start_box p{
+      padding-bottom: 11px;
+    }
+    #start_box input{
+      height: 30px;
+      text-align: center;
+    }
+    #sendBtn{
+      outline: 0;
+      width:110px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+    }
+    #chatMsg{
+      width: 90%;
+      margin: 0 auto;
+      padding: 20px;
+      height: 570px; /*290px*/ 
+      /*border: 1px solid grey;*/
+      overflow: auto;
+    }
+    #sendMsg{
+      float: right;
+      position: relative;
+      right: 10px;
+      width: 80px;
+      height: 30px;
+      line-height: 30px;
+      border: 1px solid grey;
+    }
+    From,To{
+      width:100%;
+      font-size: 12px;
+      margin-bottom: 5px;
+    }
+    .title{
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    /* From fuujiro add*/
+    to_msg {
+      border: 1px solid #e0e0e0;
+      border-radius: 10px;
+      padding: 20px;
+      width: fit-content;
+      max-width: 35%;
+      margin: 10px;
+      width: 100%;
+      color: #3f51b5;
+      display: block;
+      float: right;
+      clear: both;
+    }
+    from_msg {
+      border: 1px solid #e0e0e0;
+      border-radius: 10px;
+      padding: 20px;
+      width: fit-content;
+      max-width: 35%;
+      margin: 10px;
+      width: 100%;
+      color: #3f51b5;
+      /*text-decoration: underline;*/
+      display: block;
+      float: left;
+      clear: both;
+    }
+    .central_input {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      border: none;
+      border-top: 1px solid #e0e0e0;
+      outline: none;
+      padding: 14px;
+      font-size: 14px;
+      background-color: antiquewhite;
+    }
+
+    .fzy_1{
+    background-color: #8fc0a9; /* #8fc0a9 #68b0ab #faf3dd */
+    }
+    .tfzy_1{
+        color: white;
+    }
+
+    .fzy_2{
+        background-color: #faf3dd;
+    }
+    .tfzy_2{
+        color: #68b0ab;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div id="welcome" class="fzy_1">
+    <h1>局 域 网 聊 天 室</h1>
+    <h4>正在进入...</h4>
+    <h5>by fuujiro</h5>    
+  </div>
+  <div id="start" class="fzy_2">
+    <div id="start_box" >
+      <h1 class="tc">欢迎使用聊天室软件</h1>
+      <p>请输入当前用户号码：</p><input type="text" id="from"><br/><br/>
+      <p>请输入对方用户号码：</p><input type="text" id="to"><br/><br/>
+      <button id="sendBtn" class="Sbd">开始聊天</button>
+    </div>
+  </div>
+  <div id="content">
+    <div id="chatMsg"></div>
+    <div id="txt">
+      <!-- 
+      <textarea name="" id="msg"></textarea><br/>
+      <button id="sendMsg" onclick="sendMsg()">发送</button> 
+      -->
+      <div id="message">
+        <input id="msg" class="central_input" type="text" placeholder="Write a message...">
+      </div>
+    </div>
+  </div>
+</body>
+<script src="/socket.io/socket.io.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+<script>
+  // You can also require other files to run in this process
+  require('./client.js')
+</script>
+
+</html>
