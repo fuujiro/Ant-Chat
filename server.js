@@ -60,7 +60,7 @@ server.on('connection', function (socket) {
       //console.log("first");
       room.push(singelRoom);
       //console.log(room.length);
-      socket.write("等待对方上线");
+      socket.write("Waiting for him/her online");
     }
 
   });

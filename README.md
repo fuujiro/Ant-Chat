@@ -1,4 +1,7 @@
 # Ant-Chat
+
+![Ant](https://raw.githubusercontent.com/fuujiro/pictures/master/Ant-Chat/ant.jpg)
+
 🐜Simple Chat application 💬built with Node.js, Electron &amp; material design for multi-platform.
 
 ### 1. Introduction
@@ -59,13 +62,24 @@ Below is the `Ant-Chat` structure:
 
 4. Hope enjoy it!
 
-### 3. TODO list
+### 3. screenShot
+
+1. loading page
+![1](https://raw.githubusercontent.com/fuujiro/pictures/master/Ant-Chat/1.png)
+
+2. login page
+![2](https://raw.githubusercontent.com/fuujiro/pictures/master/Ant-Chat/2.png)
+
+3. chatting page
+![3](https://raw.githubusercontent.com/fuujiro/pictures/master/Ant-Chat/3.png)
+
+### 4. TODO list
 
 - [x] `Ant-Chat` v0.1 for Desktop
 - [ ] `Ant-Chat` for iOS
 - [ ] `Ant-Chat` for Android
 
-### 4. Contribution
+### 5. Contribution
 
 If you will to contribute to this open-source program, You can launch a issue or pull request to this repo. Thanks.
 

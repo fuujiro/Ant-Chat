@@ -14,14 +14,14 @@
      From = document.getElementById("from").value;
      To = document.getElementById("to").value;
      if (From == To && From != "") {
-       alert("请输入不一样的号码！");
+       alert("Plz input different ID！");
        return 0;
      }
      if (From == "" || To == "") {
-       alert("输入不能为空");
+       alert("Input can not be empty");
        return 0;
      }
-     document.title = From + '正在与' + To + '通话';
+     document.title = From + ' and ' + To + ' in chat.';
      document.getElementById("start").style.display = "none";
      document.getElementById("content").style.display = "block";
    }
@@ -56,7 +56,7 @@
     $(this).blur();
     let Msg = $('#msg').val().replace(/(<([^>]+)>)/ig,"");
     if(Msg==""){
-      alert("输入空值给你的小伙伴看，并没有什么意义哦！");
+      alert("It doesn't make sense to enter a null value for me! Bro!");
       return 0;
     }
     var send = {
@@ -65,7 +65,7 @@
       msg: Msg
     };
     client.on('error', function (err) {
-      alert('请检查服务器是否正确启动！');
+      alert('Please check if the server is started normally!');
       console.log(err);
     });
     var textNodeTo = document.createElement('to_msg');
