@@ -1,6 +1,6 @@
 # Ant-Chat
 
-![Ant](https://raw.githubusercontent.com/fuujiro/pictures/master/Ant-Chat/ant.jpg)
+<img style="display: block; margin: 0 auto;align=middle;" src="https://raw.githubusercontent.com/fuujiro/pictures/master/Ant-Chat/ant.jpg" alt="" />
 
 🐜Simple Chat application 💬built with Node.js, Electron &amp; material design for multi-platform.
 
